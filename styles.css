@@ -212,6 +212,7 @@ template {
 html {
 	font-size: var(--font-size-html);
 	color: var(--color-letra);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -244,6 +245,19 @@ img {
 	max-width: 100%;
 	padding: 0 4rem;
 	margin: 2rem auto;
+}
+
+/* Contenedor de imagen - HERO*/
+.contenedor-imagen {
+	height: 100vh;
+}
+
+.contenedor-imagen img {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	object-fit: cover;
+	object-position: 0 bottom;
 }
 
 /* ===================
@@ -541,6 +555,34 @@ img {
 	background-color: var(--color-hover-nav);
 }
 
+.nav-dark {
+	background-color: var(--bs-dark);
+}
+
+.nav-dark a.activo,
+.nav-dark a:hover {
+	background-color: var(--bs-gray-100);
+	color: var(--bs-dark);
+}
+
+.nav-green {
+	background-color: var(--bs-green);
+}
+
+.nav-green a.activo,
+.nav-green a:hover {
+	background-color: #48ac7d;
+}
+
+.nav-red {
+	background-color: var(--bs-red);
+}
+
+.nav-red a.activo,
+.nav-red a:hover {
+	background-color: #e65e6b;
+}
+
 /* ===================
      FUENTES
 =================== */
@@ -589,7 +631,6 @@ h6 {
 /* ===================
      FORMULARIOS
 =================== */
-
 form * {
 	font-family: var(--fuente);
 }
@@ -646,6 +687,27 @@ form input:focus {
 	background-color: #4ba87d;
 }
 
+/* Boton danger */
+.btn-danger {
+	background-color: var(--bs-danger);
+}
+
+.btn-danger:hover {
+	background-color: #db5865;
+}
+
+/* Boton transparente */
+.btn-transparent {
+	color: var(--bs-gray-800);
+	background-color: transparent;
+	border: 1px solid #bbb;
+}
+
+.btn-transparent:hover {
+	border: 1px solid rgb(100, 100, 100);
+	background-color: transparent;
+}
+
 /* ===================
      HELPERS
 =================== */
@@ -686,8 +748,42 @@ form input:focus {
 	text-align: right;
 }
 
+.text-bold {
+	font-weight: 700;
+}
+
+.img-height-150 {
+	height: 150px;
+}
+
 @media screen and (max-width: 576px) {
 	.sm-text-left {
 		text-align: left;
 	}
+
+	.sm-text-center {
+		text-align: center;
+	}
+}
+
+/* Helpers para flex box */
+.jc-space-evenly {
+	justify-content: space-evenly;
+}
+.jc-space-between {
+	justify-content: space-between;
+}
+.jc-space-around {
+	justify-content: space-around;
+}
+
+/* Elemento fijo por contenedor */
+.position-sticky-top {
+	position: sticky;
+	top: 0;
+}
+
+.position-sticky-bottom {
+	position: sticky;
+	bottom: 0;
 }
